@@ -17,7 +17,7 @@ public class RemoveElement {
     public static void main(String args[]){
         int[] nums = {1,1,2};
         System.out.println(removeElement(nums, 2));
-        System.out.println(nums);
+        PrintUtil.print(nums);
 
     }
 }

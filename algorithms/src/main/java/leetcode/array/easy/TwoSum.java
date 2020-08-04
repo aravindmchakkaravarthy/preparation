@@ -30,7 +30,7 @@ public class TwoSum {
 
     public static void main(String args[]){
         int[] nums = {1,1,2};
-        System.out.println(twoSum(nums, 3));
+        PrintUtil.print(twoSum(nums, 3));
     }
 
 
