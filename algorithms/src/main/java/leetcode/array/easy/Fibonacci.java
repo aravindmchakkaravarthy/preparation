@@ -41,5 +41,10 @@ public class Fibonacci {
 
     public static void main(String[] args){
         System.out.println(fib(10));
+
+        int i = 5;
+        int j = 7;
+        int x = Math.abs(i -j);
+        System.out.print(-4 - -6);
     }
 }
