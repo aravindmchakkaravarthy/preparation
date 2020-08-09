@@ -22,16 +22,9 @@ public class SortArrayByParity {
                 int temp = A[l];
                 A[l] = A[r];
                 A[r] = temp;
-                l++;
-                r--;
-            }else{
-                if(A[l]%2==0) {
-                    l++;
-                }
-                if(A[r]%2 !=0) {
-                    r--;
-                }
             }
+            if(A[l] % 2 == 0) l++;
+            if(A[r] % 2 != 0) r--;
         }
         return A;
     }
