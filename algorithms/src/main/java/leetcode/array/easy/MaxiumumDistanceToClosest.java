@@ -1,4 +1,7 @@
 package leetcode.array.easy;
+
+import java.sql.SQLOutput;
+
 /**
  * In a row of seats, 1 represents a person sitting in that seat, and 0 represents that the seat is empty.
  *
@@ -27,26 +30,28 @@ package leetcode.array.easy;
 public class MaxiumumDistanceToClosest {
 
     public static int maxDistToClosest(int[] seats) {
-        int lp = 0, fp = 0, maxFp = 0, maxLp = 0;
-        int runningCount = 0;
-        for (int i=0;i<seats.length;i++){
-            if(seats[i] == 0){
-                lp = i;
-                if(runningCount == 0){
-                    lp=i;
-                    fp=i;
-                }
-                runningCount++;
-                if((lp-fp) >= (maxLp - maxFp)){
-                    maxLp = lp;
-                    maxFp = fp;
-                }
-            }else{
-                runningCount = 0;
+        int k =0, ans = 0;
+        for (int seat : seats) {
+            if (seat == 1) {
+                k = 0;
+            } else {
+                k++;
+                ans = Math.max(ans, (k + 1) / 2);
             }
         }
-        if(maxLp == seats.length-1) return maxLp;
-        return (maxFp+maxLp)/2;
+        for(int i=0;i<seats.length;i++){
+            if(seats[i] == 1){
+                ans = Math.max(ans, i);
+                break;
+            }
+        }
+        for(int i=seats.length-1;i>=0;i--){
+            if(seats[i] == 1){
+                ans = Math.max(ans, seats.length-1-i);
+                break;
+            }
+        }
+        return ans;
 
     }
 
