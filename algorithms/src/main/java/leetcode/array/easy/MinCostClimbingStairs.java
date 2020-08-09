@@ -27,7 +27,7 @@ public class MinCostClimbingStairs {
 
     public static void main(String args[]){
         int[] nums = {10,15,20};
-        System.out.println(minCostClimbingStairs(nums));
+        System.out.println(minCostClimbingStairs(nums));//Took the solution from leetcode. not created by self.
 
     }
 }
