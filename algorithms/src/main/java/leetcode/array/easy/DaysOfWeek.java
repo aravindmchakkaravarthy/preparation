@@ -58,7 +58,7 @@ public class DaysOfWeek {
     }
 
     public static void main(String[] args){
-
+        System.out.println(Math.abs(-19-(-4)));
         System.out.println(dayOfTheWeek(10, 8, 2020));
     }
 }
