@@ -42,5 +42,7 @@ public class RunningSumOf1dArray {
     public static void main(String[] args){
         int[] nums = {1,2,3,4};
         PrintUtil.print(runningSum(nums));
+
+        System.out.println(2^4);
     }
 }
