@@ -23,36 +23,40 @@ import java.util.List;
  */
 public class ThreeSum {
 
-    public static List<List<Integer>> threeSum(int[] nums) {
-
+    public static List<List<Integer>> twoSum(int[] nums, int start, int target){
         List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        for(int i=0;i<nums.length-2;i++){
-            if(i> 0 && nums[i] == nums[i-1]) continue;
-            if(nums[i] > 0) break;
-            int l = i+1;
-            int r = nums.length-1;
-            while(l<r){
-                int sum = nums[l] + nums[i] + nums[r];
-                if(sum ==0){
-                    list.add(Arrays.asList(nums[i], nums[l], nums[r]));
-                }
-                if(sum<=0){
-                    l++;
-                    while(l<r && nums[l-1] == nums[l]){
-                        l++;
-                    }
-                }
-                if(sum>=0){
-                    r--;
-                    while(l<r && nums[r+1] == nums[r]){
-                        r--;
-                    }
-                }
+        int l = start;
+        int r = nums.length-1;
+        while(l<r){
+            int sum = nums[l] + nums[r];
+            if(sum<target || (l>0 && nums[l] == nums[l-1])){
+                l++;
+            }else if(sum>target || (r<nums.length-1 && nums[r] == nums[r+1])){
+                r--;
+            }else{
+                list.add(Arrays.asList(nums[l++], nums[r--]));
             }
         }
         return list;
+    }
 
+    public static List<List<Integer>> threeSum(int[] nums) {
+
+        Arrays.sort(nums);
+        int target = 0;
+        List<List<Integer>> list = new ArrayList<>();
+        for(int i=0;i<nums.length;i++){
+            if(i>0 && nums[i] == nums[i-1])continue;
+            List<List<Integer>> res = twoSum(nums, i+1, target - nums[i]);
+            for(List<Integer> r:res){
+                List<Integer> set = new ArrayList<>();
+                set.add(nums[i]);
+                set.addAll(r);
+                list.add(set);
+            }
+
+        }
+        return list;
     }
 
     public static void main(String[] args){
