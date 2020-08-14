@@ -2,7 +2,7 @@ package leetcode.array.easy;
 
 public class PrintUtil {
 
-    static void print(int[] nums){
+    public static void print(int[] nums){
         StringBuffer printString = new StringBuffer("[");
         for(int i=0;i<nums.length;i++){
             printString.append(nums[i]);
