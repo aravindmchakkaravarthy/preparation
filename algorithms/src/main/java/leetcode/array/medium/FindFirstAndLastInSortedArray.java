@@ -1,6 +1,6 @@
 package leetcode.array.medium;
 
-import leetcode.array.easy.PrintUtil;
+import util.PrintUtil;
 
 /**
  * Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.

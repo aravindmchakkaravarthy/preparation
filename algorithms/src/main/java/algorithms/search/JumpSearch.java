@@ -1,4 +1,4 @@
-package com.amc.searching;
+package algorithms.search;
 
 public class JumpSearch {
     // Need to understand this little better

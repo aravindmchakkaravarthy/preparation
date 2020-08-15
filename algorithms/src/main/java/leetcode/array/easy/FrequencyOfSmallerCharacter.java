@@ -1,5 +1,7 @@
 package leetcode.array.easy;
 
+import util.PrintUtil;
+
 /**
  * Let's define a function f(s) over a non-empty string s, which calculates the frequency of the smallest character in s. For example, if s = "dcce" then f(s) = 2 because the smallest character is "c" and its frequency is 2.
  *

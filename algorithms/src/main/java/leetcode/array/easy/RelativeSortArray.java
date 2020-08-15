@@ -1,5 +1,7 @@
 package leetcode.array.easy;
 
+import util.PrintUtil;
+
 import java.util.*;
 
 /**

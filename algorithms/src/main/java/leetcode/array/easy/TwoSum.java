@@ -1,5 +1,7 @@
 package leetcode.array.easy;
 
+import util.PrintUtil;
+
 import java.util.HashMap;
 import java.util.Map;
 

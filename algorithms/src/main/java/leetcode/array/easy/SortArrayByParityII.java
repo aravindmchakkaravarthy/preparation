@@ -1,5 +1,7 @@
 package leetcode.array.easy;
 
+import util.PrintUtil;
+
 /**
  * Given an array A of non-negative integers, half of the integers in A are odd, and half of the integers are even.
  *
