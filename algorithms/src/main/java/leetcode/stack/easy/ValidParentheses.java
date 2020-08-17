@@ -35,7 +35,7 @@ import java.util.Stack;
  * Input: "{[]}"
  * Output: true
  */
-public class ValidString {
+public class ValidParentheses {
 
     public Character getMatchingEnd(Character c){
         switch (c){
@@ -69,7 +69,7 @@ public class ValidString {
     }
 
     public static void main(String[] args){
-        ValidString vs = new ValidString();
+        ValidParentheses vs = new ValidParentheses();
         System.out.println(vs.isValid("(]"));
     }
 }

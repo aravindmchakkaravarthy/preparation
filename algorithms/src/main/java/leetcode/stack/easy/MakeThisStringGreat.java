@@ -1,5 +1,6 @@
 package leetcode.stack.easy;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class MakeThisStringGreat {
@@ -27,6 +28,10 @@ public class MakeThisStringGreat {
     }
 
     public static void main(String[] args){
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.add(1);
+        ll.add(2);
+        System.out.println(ll.remove());
         MakeThisStringGreat mtsg = new MakeThisStringGreat();
         System.out.println(mtsg.makeGood("leEeetcode"));
 
