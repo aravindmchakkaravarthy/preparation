@@ -32,10 +32,11 @@ import java.util.Stack;
  */
 public class BSTToGST {
 
-    private Map<Integer, Integer> getSum(TreeNode root){
-        int sum = 0;
+
+
+    public TreeNode bstToGst(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
-        Map<Integer, Integer> map = new HashMap<>();
+        int sum =0;
         TreeNode curr = root;
         while(curr != null || !stack.isEmpty()){
             while(curr != null){
@@ -43,26 +44,9 @@ public class BSTToGST {
                 curr = curr.right;
             }
             curr =  stack.pop();
-            sum += curr.val;
-            map.put(curr.val, sum);
+            sum +=curr.val;
+            curr.val = sum;
             curr = curr.left;
-        }
-        return map;
-    }
-
-    public TreeNode bstToGst(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<>();
-        Stack<TreeNode> targetS = new Stack<>();
-        Map<Integer, Integer> map = getSum(root);
-        stack.push(root);
-        while(!stack.isEmpty()){
-            TreeNode node = stack.pop();
-            if(null != node){
-                node.val = map.get(node.val);
-                System.out.println(node.val);
-                stack.push(node.right);
-                stack.push(node.left);
-            }
         }
         return root;
     }
