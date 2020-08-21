@@ -1,9 +1,7 @@
 package leetcode.bst.medium;
 
-import leetcode.stack.medium.TreeNode;
+import util.TreeNode;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 /**

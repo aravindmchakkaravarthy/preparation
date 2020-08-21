@@ -1,6 +1,6 @@
 package leetcode.bst.medium;
 
-import leetcode.stack.medium.TreeNode;
+import util.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package leetcode.stack.medium;
+package util;
 
 public class TreeNode {
     public int val;
