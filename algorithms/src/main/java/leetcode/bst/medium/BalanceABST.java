@@ -67,7 +67,7 @@ public class BalanceABST {
     }
 
     public static void main(String[] args){
-
+        String s = "";
         TreeNode root = TreeNode.buildBinaryTree(new int[]{14,9,16,2,13});
         BalanceABST balanceABST = new BalanceABST();
         TreeNode result = balanceABST.balanceBST(root);
