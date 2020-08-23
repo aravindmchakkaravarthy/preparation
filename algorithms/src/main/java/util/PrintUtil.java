@@ -1,5 +1,7 @@
 package util;
 
+import DS.ListNode;
+
 public class PrintUtil {
 
     public static void print(int[] nums){
@@ -26,6 +28,20 @@ public class PrintUtil {
             sb.append("]");
             System.out.println(sb);
         }
+    }
+
+    public static void print(ListNode head){
+        while(head != null){
+            System.out.print(head.val);
+            if(null != head.next) {
+                System.out.print(" -> ");
+            }else{
+                System.out.println("");
+            }
+            head = head.next;
+        }
+
+
     }
 
 
