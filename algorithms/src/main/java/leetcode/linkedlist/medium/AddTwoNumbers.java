@@ -1,5 +1,7 @@
 package leetcode.linkedlist.medium;
 
+import DS.ListNode;
+
 /**
  * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
  *
@@ -12,25 +14,6 @@ package leetcode.linkedlist.medium;
  * Explanation: 342 + 465 = 807.
  */
 public class AddTwoNumbers {
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-    }
-
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int reminder = 0;
