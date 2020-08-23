@@ -1,6 +1,6 @@
 package leetcode.tree.medium;
 
-import util.TreeNode;
+import DS.TreeNode;
 
 import java.util.*;
 

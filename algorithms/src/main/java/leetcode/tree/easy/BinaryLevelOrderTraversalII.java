@@ -1,7 +1,6 @@
 package leetcode.tree.easy;
 
-import leetcode.tree.medium.BinaryLevelOrderTraversal;
-import util.TreeNode;
+import DS.TreeNode;
 
 import java.util.*;
 

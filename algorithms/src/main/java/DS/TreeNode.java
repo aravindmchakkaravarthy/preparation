@@ -1,4 +1,4 @@
-package util;
+package DS;
 
 public class TreeNode {
     public int val;

@@ -1,9 +1,8 @@
 package leetcode.tree.easy;
 
-import util.TreeNode;
+import DS.TreeNode;
 
 import java.util.ArrayDeque;
-import java.util.Queue;
 import java.util.Random;
 import java.util.Stack;
 

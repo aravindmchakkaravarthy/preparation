@@ -1,5 +1,7 @@
 package leetcode.linkedlist.easy;
 
+import DS.ListNode;
+
 /**
  * Given a linked list, determine if it has a cycle in it.
  *
@@ -29,14 +31,6 @@ package leetcode.linkedlist.easy;
  */
 
 public class LinkedListCycle {
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
 
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;

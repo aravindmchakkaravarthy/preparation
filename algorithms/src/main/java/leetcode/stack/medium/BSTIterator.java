@@ -1,6 +1,6 @@
 package leetcode.stack.medium;
 
-import util.TreeNode;
+import DS.TreeNode;
 
 import java.util.Random;
 import java.util.Stack;
