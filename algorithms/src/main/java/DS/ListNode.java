@@ -4,6 +4,8 @@ public class ListNode {
 
     public int val;
     public ListNode next;
+    public ListNode prev;
+    public ListNode child;
 
     public ListNode() {
     }
