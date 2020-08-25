@@ -52,4 +52,13 @@ public class FlattenAMultiLevelLinkedList {
     }
 
 
+    public static void main(String[] args){
+        new FlattenAMultiLevelLinkedList().flatten(new Node()); // add examples
+
+        //TODO - just do recursive with no extra space.
+
+
+    }
+
+
 }
