@@ -34,7 +34,7 @@ public class PrintUtil {
         while(head != null){
             System.out.print(head.val);
             if(null != head.next) {
-                System.out.print(" -> ("+ head.prev + ")");
+                System.out.print(" -> (" + (head.prev == null ? null : head.prev.val) + ") " + head.next.val + " -> ");
             }else{
                 System.out.println("");
             }

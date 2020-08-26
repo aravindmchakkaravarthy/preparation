@@ -1,7 +1,5 @@
 package DS;
 
-import util.PrintUtil;
-
 import java.util.*;
 
 public class OpenTheLock {

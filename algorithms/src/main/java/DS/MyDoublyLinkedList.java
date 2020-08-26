@@ -1,5 +1,6 @@
 package DS;
 
+
 public class MyDoublyLinkedList {
 
     ListNode head;
@@ -17,10 +18,10 @@ public class MyDoublyLinkedList {
     }
 
     public ListNode getNodeAtIndex(int index) {
-        int i =0;
-        ListNode node = null;
+        int i =1;
+        ListNode node = head;
         while(i<=index && i < size){
-            node = head.next;
+            node = node.next;
             i++;
         }
         return node;
@@ -39,14 +40,13 @@ public class MyDoublyLinkedList {
      */
     public void addAtHead(int val) {
         ListNode node = new ListNode(val);
-        if(size == 0){
-            head = node;
-            tail = head;
-        }else{
+        if(head != null){
             node.next = head;
             head.prev = node;
-            head = node;
-
+        }
+        head = node;
+        if(size == 0){
+            tail = head;
         }
         size++;
     }
@@ -60,54 +60,54 @@ public class MyDoublyLinkedList {
             return;
         }
         ListNode node = new ListNode(val);
-        if (size == 1){
-            head.next = node;
-            node.prev = head;
-        }else{
-            node.prev = tail;
-            tail.next = node;
-        }
+        node.prev = tail;
+        tail.next = node;
         tail = node;
         size++;
-
     }
 
     /**
      * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
      */
     public void addAtIndex(int index, int val) {
-        if(index <0 || index > size) return;
+        if(index > size) return;
         if(index == 0){
             addAtHead(val);
-        }else if (index == size){
+        }else if(index == size){
             addAtTail(val);
-        }else {
-            ListNode node = getNodeAtIndex(index);
-            ListNode newNode = new ListNode(val);
-            ListNode prev = node.prev;
-            node.prev = newNode;
-            newNode.next = node;
-            prev.next = newNode;
+        }else{
+            ListNode curr = getNodeAtIndex(index);
+            ListNode node = new ListNode(val);
+            ListNode prev = curr.prev;
+            prev.next = node;
+            curr.prev = node;
+            node.next = curr;
             size++;
         }
-
     }
 
     /**
      * Delete the index-th node in the linked list, if the index is valid.
      */
     public void deleteAtIndex(int index) {
-        if(size == 0) return;
-        if(index<0 || index>=size) return;
+        if(index>=size || index <0) return;
+
         ListNode node = getNodeAtIndex(index);
         ListNode prev = node.prev;
         ListNode next = node.next;
-        if(prev != null){
+        if(prev == null){
+            next.prev = null;
+            head = next;
+        }else{
             prev.next = next;
         }
-        if(next != null){
-            next.prev = prev;
+        if(null == next){
+            tail = prev;
         }
+    }
+
+    public ListNode getTail(){
+        return tail;
     }
 
     public int size() {
@@ -117,12 +117,12 @@ public class MyDoublyLinkedList {
     public static void main(String[] args){
         MyDoublyLinkedList ll = new MyDoublyLinkedList();
         ll.addAtHead(1);
-        ll.addAtHead(2);
-        ll.addAtTail(4);
+        ll.addAtTail(2);
+
         ll.addAtTail(3);
-        System.out.println(ll.size());
-        System.out.println(ll.get(1));
-        ll.deleteAtIndex(0);
-        System.out.println(ll.get(0));
+        ll.addAtTail(4);
+
+        ll.deleteAtIndex(3);
+        System.out.println(ll.getTail().val);
     }
 }
