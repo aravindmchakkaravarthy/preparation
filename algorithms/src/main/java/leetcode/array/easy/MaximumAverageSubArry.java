@@ -1,6 +1,6 @@
 package leetcode.array.easy;
 
-import jdk.swing.interop.SwingInterOpUtils;
+
 
 public class MaximumAverageSubArry {
 

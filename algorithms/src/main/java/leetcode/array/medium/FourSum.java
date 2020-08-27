@@ -52,7 +52,7 @@ public class FourSum {
         }
         for(int i=start;i<nums.length;++i){
             if(i==start || nums[i] != nums[i-1]) {
-                for(var set:kSum(nums, target - nums[i], i+1,k-1)){
+                for(List<Integer> set:kSum(nums, target - nums[i], i+1,k-1)){
                     res.add(new ArrayList<>(Arrays.asList(nums[i])));
                     res.get(res.size()-1).addAll(set);
                 }
