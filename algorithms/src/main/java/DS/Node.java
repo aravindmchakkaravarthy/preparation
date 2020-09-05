@@ -12,6 +12,8 @@ public class Node {
     public Node right;
     public List<Node> children;
 
+    public List<Node> neighbors;
+
     public Node() {
     }
 
@@ -22,5 +24,10 @@ public class Node {
     public Node(int val, Node next) {
         this.val = val;
         this.next = next;
+    }
+
+    public Node(int val, List<Node> neighbors){
+        this.val = val;
+        this.neighbors = neighbors;
     }
 }

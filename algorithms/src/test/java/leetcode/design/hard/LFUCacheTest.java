@@ -1,12 +1,7 @@
 package leetcode.design.hard;
 
-import org.junit.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import util.PrintUtil;
-
-import java.sql.SQLOutput;
-import java.util.Map;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LFUCacheTest {
 
