@@ -44,6 +44,8 @@ public class Subsets {
         // #backtracking
         Subsets sb = new Subsets();
         System.out.println(sb.subsets(new int[]{1,2,3}));
+        String s = "";
+        s.contains("c");
     }
 
 
