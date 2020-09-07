@@ -27,5 +27,6 @@ public class DuplicatesIII {
         //TODO #Read again
         DuplicatesIII duplicatesIII = new DuplicatesIII();
         System.out.println(duplicatesIII.containsNearbyAlmostDuplicate(new int[]{1,2,3,1}, 3,0));
+        System.out.println(duplicatesIII.containsNearbyAlmostDuplicate(new int[]{1,5,9,1,5,9}, 2,3));
     }
 }
