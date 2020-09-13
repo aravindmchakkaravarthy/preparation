@@ -59,6 +59,9 @@ public class CombinationSumII {
 
     public static void main(String[] args){
         CombinationSumII cs = new CombinationSumII();
+        int i = 0;
+        char c = (char) ('a' + i);
+        System.out.println(c);
         System.out.println(cs.combinationSum2(new int[]{10,1,2,7,6,1,5}, 8));
         // #backtracking
     }

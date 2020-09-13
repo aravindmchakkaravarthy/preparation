@@ -1,9 +1,5 @@
 package leetcode.string.medium;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
 /**
  * Implement a basic calculator to evaluate a simple expression string.
  *
