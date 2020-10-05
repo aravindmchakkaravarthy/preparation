@@ -42,7 +42,6 @@ public class AdjacencySet extends AbstractGraph{
     @Override
     public void addEdge(int i, int j) {
         addEdge(i,j,1);
-
     }
 
     @Override
